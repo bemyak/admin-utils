@@ -10,7 +10,7 @@ import subprocess
 import datetime
 import MySQLdb
 
-db_host="zabbix.bpm.lanit"
+db_host="zabbix.example.com"
 db_user="dumpmon"
 db_passwd="dumpmon"
 db_name="dumpmon"
@@ -63,7 +63,7 @@ if duedate=="":
         print 'No duedate specified! Please add ex. "duedate=16.04.2035" to your args'
         exit=1
 if ref=="" or "@" not in ref:
-        print 'No reference specified! Please, add email ex. "ref=somebody@bpm.lanit" to your args'
+        print 'No reference specified! Please, add email ex. "ref=somebody@example.com" to your args'
         exit=1
 if exit==1:
         sys.exit(0)

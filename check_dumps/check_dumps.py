@@ -18,11 +18,11 @@ from email.mime.text import MIMEText
 
 #######BASIC CONFIGURATION##################
 
-db_host="zabbix.bpm.lanit"
+db_host="zabbix.example.com"
 db_user="dumpmon"
 db_passwd="dumpmon"
 db_name="dumpmon"
-sender="dumpmon@bpm.lanit"
+sender="dumpmon@example.com"
 recievers=["_BPM_Admins@lanit.ru"]
 
 ############################################
@@ -37,7 +37,7 @@ def send_notification_warn (sender,recievers, dump, schema, date, duedate):
 	msg['Content-Type'] = 'text/html; charset=utf-8'
 	msg['To']=", ".join(recievers)
 	text="""К сожалению, срок хранения дампа <b>%s</b> истёк. Вы получили это письмо, так как указаны в качестве отвественного сотрудника.<br>
-Если потребность в дампе сохраняется, заведите задачу в <a href=http://jira.bpm.lanit>JIRA</a> на проект &#34;Поддержка&#34;  с просьбой изменить срок хранения. В противном случае, дамп будет удалён %s<br><br>
+Если потребность в дампе сохраняется, заведите задачу в <a href=http://jira.example.com>JIRA</a> на проект &#34;Поддержка&#34;  с просьбой изменить срок хранения. В противном случае, дамп будет удалён %s<br><br>
 <table cellpadding=5 border=1>
 <tr><td align=center colspan=2>Информация о дампе</td></tr>
 <tr><td>Имя</td><td>%s</td></tr>

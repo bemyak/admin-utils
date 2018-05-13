@@ -1,6 +1,6 @@
 #!/bin/bash
 # Проверяет, когда закончился запуск tomcat
-#REM_HOST=sbld-cp-1.bpm.lanit
+#REM_HOST=sbld-cp-1.example.com
 #REM_USER=was
 #REM_PASS=was
 #REM_PATH=/tmp/123
